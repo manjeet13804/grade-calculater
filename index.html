@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <h1>GRADING SYSTEM ASSIGNMENT</h1>
+    <section class="main-container">
+        <section class="marks-input">
+            <div class="input-top-div">Grading System In JS</div>
+            <form class="input-details" id ='input-details'>
+                <label for="english">English</label>
+                <input type="number" value="" id="english"/><br/>
+                <label for="maths">Maths</label>
+                <input type="number" value="" id="maths"/><br/>
+                <label for="physics">Physics</label>
+                <input type="number" value="" id="physics" /><br/>
+                <label for="chemistry">Chemistry</label>
+                <input type="number" value="" id="chemistry"/><br/>
+                <label for="computer">Computer</label>
+                <input type="number" value="" id="computer"/><br/>
+                <button type="submit" class="btn" id="btn">Calculate Grade</button>
+            </form>
+        </section>
+        <section class="report">
+            <div class="report-1">
+                <div class="report-head">Total</div>
+                <div class="report-text" id="total-text"></div>
+            </div>
+            <div class="report-1">
+                <div class="report-head">Average</div>
+                <div class="report-text" id="average-text"></div>
+            </div>
+            <div class="report-1">
+                <div class="report-head">Grade</div>
+                <div class="report-text" id="grade-text"></div>
+            </div>
+        </section>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
