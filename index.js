@@ -39,11 +39,12 @@ english.addEventListener("change",(e)=>{
     else alert("Kindly enter number between 0 and 100")
 
   })
-function calculateGrade(){
+function calculateGrade(e){
+    e.preventDefault()
 var totalText =document.getElementById("total-text")
 var AverageText =document.getElementById("average-text")
 var GradeText =document.getElementById("grade-text")
-  var totalmarks = english + maths + chemistry + computer +physics;
+  var totalmarks = parseInt(english) + parseInt(maths) + parseInt(chemistry) + parseInt(computer) +parseInt(physics);
   var AverageMarks = totalmarks/5;
   var GradeValue
   if(english<35 || maths<35 || physics<35 || chemistry<35 || computer<35){
@@ -59,6 +60,6 @@ var GradeText =document.getElementById("grade-text")
   GradeText.innerHTML =`Your Grade is ${GradeValue}`
 
 }
-document.getElementById("btn").onclick =function(){
-    calculateGrade()
+document.getElementById("btn").onclick =function(e){
+    calculateGrade(e)
 }
