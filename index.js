@@ -3,6 +3,7 @@ var maths =document.getElementById("maths")
 var physics =document.getElementById("physics")
 var chemistry =document.getElementById("chemistry")
 var computer =document.getElementById("computer")
+
 english.addEventListener("change",(e)=>{
     if(document.getElementById("english").value<100 && document.getElementById("english").value>0){
     english =document.getElementById("english").value
@@ -44,12 +45,19 @@ function calculateGrade(e){
 var totalText =document.getElementById("total-text")
 var AverageText =document.getElementById("average-text")
 var GradeText =document.getElementById("grade-text")
+if(english.value=="") english=0;
+if(physics.value=="") physics=0;
+if(chemistry.value=="") chemistry=0;
+if(maths.value=="") maths=0;
+if(computer.value=="") computer=0;
+
   var totalmarks = parseInt(english) + parseInt(maths) + parseInt(chemistry) + parseInt(computer) +parseInt(physics);
   var AverageMarks = totalmarks/5;
   var GradeValue
-  if(english<35 || maths<35 || physics<35 || chemistry<35 || computer<35){
+  if(english<35 || maths<35 || physics<35 || chemistry<35 || computer<35 ){
     GradeValue = "F"
   }
+  
   else if(AverageMarks>=90) GradeValue ="A"
   else if(AverageMarks>=80) GradeValue ="B"
   else if(AverageMarks>=70) GradeValue ="C"
